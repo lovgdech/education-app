@@ -1,0 +1,194 @@
+.news {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    border-left: 5px solid #244366;
+}
+
+.header h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.header p {
+    text-decoration: underline;
+    font-size: 1.3rem;
+}
+
+.header p:hover {
+    color: #717171;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    width: 49%;
+    min-width: 340px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #bebebe;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: 1px solid #bebebe;
+    overflow: hidden;
+    height: 280px;
+}
+
+.content button {
+    padding: 8px 15px;
+    background-color: #4290a9;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.content h3 {
+    font-size: 2rem;
+    margin: 15px 0;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: white;
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.avatar img {
+    margin-right: 5px;
+}
+
+.auth p {
+    font-size: 1.4rem;
+}
+
+.interact,
+.view,
+.comment {
+    display: flex;
+    align-items: center;
+}
+
+.interact i {
+    margin-right: 5px;
+}
+
+.view,
+.comment {
+    font-size: 1.4rem;
+}
+
+.view {
+    margin-right: 20px;
+}
+
+.box-t2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #bebebe;
+}
+
+.box-t2>img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-t3 {
+    width: 49%;
+    min-width: 340px;
+    height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-bottom: 1px solid #bebebe;
+}
+
+.box-t3>img {
+    width: 30%;
+
+}
+
+.box-t3 .content {
+    padding: 10px 20px;
+    flex: 1;
+}
+
+.box-t3 button {
+    padding: 5px 10px;
+    background-color: #4290a9;
+    border: 0;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.box-t3 h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+}
+
+.content button:hover {
+    background-color: #318aa8;
+}

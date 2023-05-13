@@ -1,0 +1,85 @@
+.header {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-left: 5px solid #244366;
+}
+
+.header h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.body {
+    padding: 20px 30px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+}
+
+.body li {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.body li:last-child {
+    margin-bottom: 0;
+}
+
+.body li a i {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.body li p {
+    margin-left: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.face-card {
+    background-color: #39569E;
+}
+
+.face-card i {
+    background-color: #2E457E;
+}
+
+.tw-card {
+    background-color: #52AAF4;
+}
+
+.tw-card i {
+    background-color: #4288C3;
+}
+
+.is-card {
+    background-color: #C8359D;
+}
+
+.is-card i {
+    background-color: #A02A7E;
+}
+
+.yt-card {
+    background-color: #DC472E;
+}
+
+.yt-card i {
+    background-color: #B03925;
+}

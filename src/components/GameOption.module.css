@@ -1,0 +1,72 @@
+.game {
+    width: 100%;
+    padding: 30px 8vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.title h2 {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.title span {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.box {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    border-radius: 9px;
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h3 {
+    font-size: 2rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.header img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.content {
+    background-color: #4290A9;
+    padding: 20px 40px;
+}
+
+.content p {
+    text-align: justify;
+    color: white;
+}

@@ -1,0 +1,105 @@
+.industry {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.header {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    border-left: 5px solid #244366;
+    cursor: default;
+}
+
+.header h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+}
+
+.header-button button {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 1px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    width: 24%;
+    height: 350px;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1e2024);
+    z-index: 1;
+}
+
+.content button {
+    font-size: 1.2rem;
+    color: white;
+    background-color: #4290A9;
+    padding: 7px 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-radius: 1px;
+    cursor: pointer;
+    border: none;
+}
+
+.content button i {
+    font-size: 1.8rem
+}
+
+.content button:hover {
+    background-color: #1d667f;
+}
+
+.content p {
+    font-size: 1.4rem;
+    color: white;
+    line-height: 1.8rem;
+    cursor: pointer;
+}
+
+.content p:hover {
+    text-decoration: underline;
+}
