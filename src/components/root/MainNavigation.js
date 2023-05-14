@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./MainNavigation.module.css";
-import LogoImg from "../assets/images/logo.png";
+import LogoImg from "../../assets/images/logo.png";
 
 const MainNavigation = () => {
   return (

@@ -5,9 +5,9 @@ import styles from "./Banner.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import BannerBackground from "../assets/images/banner-background.jpg";
+import BannerBackground from "../../assets/images/banner-background.jpg";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import { SLIDES_DATA } from "../data";
+import { SLIDES_DATA } from "../../data";
 
 const Banner = () => {
   return (

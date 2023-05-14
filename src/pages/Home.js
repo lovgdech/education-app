@@ -1,10 +1,10 @@
 import React from "react";
 
-import Banner from "../components/Banner";
-import Industry from "../components/Industry";
-import Slidebar from "../components/Slidebar";
-import News from "../components/News";
-import Form from "../components/Form";
+import Banner from "../components/home/Banner";
+import Industry from "../components/home/Industry";
+import Slidebar from "../components/home/Slidebar";
+import News from "../components/home/News";
+import Form from "../components/home/Form";
 
 const Home = () => {
   return (

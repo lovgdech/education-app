@@ -7,9 +7,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import styles from "./GameOption.module.css";
-import { GAMEOPTIONS_DATA } from "../data";
+import { GAMEOPTIONS_DATA } from "../../data";
 
-const GameOption = () => {
+const GameOption = (props) => {
   return (
     <div className={styles.game}>
       <div className={styles.title}>
@@ -25,7 +25,7 @@ const GameOption = () => {
           slidesPerView={3}
           effect={"coverflow"}
           grabCursor={true}
-          centeredSlides={true}
+          centeredSlides={false}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -37,9 +37,15 @@ const GameOption = () => {
           modules={[EffectCoverflow, Pagination, Autoplay]}
           className="mySwiper"
         >
-          {GAMEOPTIONS_DATA.map((item) => {
+          {GAMEOPTIONS_DATA.map((item, index) => {
             return (
-              <SwiperSlide key={item.id} className={styles.box}>
+              <SwiperSlide
+                onClick={() => {
+                  props.onChangeImageNumber(index + 1);
+                }}
+                key={item.id}
+                className={styles.box}
+              >
                 <div className={styles.header}>
                   <img src={item.image} />
                   <h3>{item.industry}</h3>

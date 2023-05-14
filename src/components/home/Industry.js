@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import styles from "./Industry.module.css";
 import "swiper/css";
-import ImageCNTT from "../assets/images/industry-cntt.png";
-import { INDUSTRYS_DATA } from "../data";
+import ImageCNTT from "../../assets/images/industry-cntt.png";
+import { INDUSTRYS_DATA } from "../../data";
 import { Autoplay } from "swiper";
 
 const AboutIndustry = () => {

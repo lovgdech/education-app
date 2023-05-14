@@ -3,8 +3,8 @@
 import React from "react";
 
 import styles from "./News.module.css";
-import BannerBackground from "../assets/images/banner-background.jpg";
-import { NEWS_DATA } from "../data";
+import BannerBackground from "../../assets/images/banner-background.jpg";
+import { NEWS_DATA } from "../../data";
 
 const News = () => {
   return (

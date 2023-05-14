@@ -2,7 +2,7 @@
 import React from "react";
 
 import styles from "./Dedication.module.css";
-import BannerBackground from "../assets/images/banner-background.jpg";
+import BannerBackground from "../../assets/images/banner-background.jpg";
 
 const Dedication = () => {
   return (

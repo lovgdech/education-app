@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Notification.module.css";
-import { NOTIFIACTIONS_DATA } from "../data";
+import { NOTIFIACTIONS_DATA } from "../../data";
 
 const Notification = () => {
   return (

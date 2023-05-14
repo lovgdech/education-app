@@ -1,0 +1,91 @@
+.game {
+  text-align: center;
+  padding: 0 8%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.game-status h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.game-status p {
+  font-size: 1.6rem;
+  margin-top: 3px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button button {
+  font-size: 1.4rem;
+  height: 40px;
+  width: 150px;
+  background-color: #318AA8;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 20px;
+  box-shadow: 2px 8px 12px #318aa873;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background-color: #12617b;
+}
+
+.tile-container {
+  display: grid;
+  grid-gap: 0px;
+  border: 1px solid gray;
+  background-color: #318AA8;
+}
+
+.tile {
+  outline: 1px solid gray;
+  outline-offset: -1px;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 100%;
+  background-repeat: no-repeat;
+}
+
+.tile-wrapper {
+  position: relative;
+}
+
+.full-image {
+  overflow: hidden;
+  border: 1px solid gray;
+  width: 300px;
+  height: 300px;
+}
+
+.full-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.highscoretable {
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-row-in-highscore {
+  border: 5px solid lightgreen;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
