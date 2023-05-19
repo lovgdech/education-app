@@ -13,13 +13,23 @@ const Game = (props) => {
       <GameStatusView />
       <div className={styles.content}>
         <PuzzleView />
-        <FullImageView />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+            height: "100%",
+          }}
+        >
+          <FullImageView />
+          <RestartButtonsView
+            onInitGame={props.onInitGame}
+            imageNumber={props.imageNumber}
+            onChangeImageNumber={props.onChangeImageNumber}
+          />
+        </div>
       </div>
-      <RestartButtonsView
-        onInitGame={props.onInitGame}
-        imageNumber={props.imageNumber}
-        onChangeImageNumber={props.onChangeImageNumber}
-      />
     </div>
   );
 };

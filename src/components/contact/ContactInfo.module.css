@@ -1,0 +1,37 @@
+.contact-info h3 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+.contact-info h3:last-child {
+    margin-top: 15px;
+}
+
+.list {
+    list-style: none;
+}
+
+
+.list li {
+    margin: 15px 0;
+
+}
+
+.list li span {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.list li i {
+    font-size: 1.6rem;
+    color: #e0a800;
+    margin-right: 8px;
+}
+
+.list li p {
+    color: #9A9DA2;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-top: 5px;
+}

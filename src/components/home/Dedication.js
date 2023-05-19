@@ -2,7 +2,7 @@
 import React from "react";
 
 import styles from "./Dedication.module.css";
-import BannerBackground from "../../assets/images/banner-background.jpg";
+import VinhDanhImg from "../../assets/images/vinhdanh.jpg";
 
 const Dedication = () => {
   return (
@@ -11,7 +11,7 @@ const Dedication = () => {
         <h3>Vinh danh</h3>
       </div>
       <div className={styles.body}>
-        <img src={BannerBackground} alt="image" />
+        <img src={VinhDanhImg} alt="image" />
         {/* <h3></h3> */}
       </div>
     </div>

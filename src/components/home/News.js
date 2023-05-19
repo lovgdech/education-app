@@ -18,11 +18,13 @@ const News = () => {
           if (index < 4)
             return (
               <div key={item.id} className={styles.box}>
-                <img src={BannerBackground} alt="image" />
+                <img src={item.image} alt="image" />
                 <div className={styles.body}>
                   <div className={styles.content}>
                     <button>Xem thêm</button>
-                    <h3>{item.title}</h3>
+                    <div style={{ minHeight: "65px" }}>
+                      <h3>{item.title}</h3>
+                    </div>
                     <p>{item.content}</p>
                   </div>
                   <div className={styles.info}>
@@ -49,7 +51,7 @@ const News = () => {
           if (index === 4)
             return (
               <div key={item.id} className={styles["box-t2"]}>
-                <img src={BannerBackground} alt="image" />
+                <img src={item.image} alt="image" />
                 <div className={styles.body}>
                   <div className={styles.content}>
                     <button>Xem thêm</button>
@@ -80,7 +82,7 @@ const News = () => {
           if (index > 4)
             return (
               <div key={item.id} className={styles["box-t3"]}>
-                <img src={BannerBackground} alt="image" />
+                <img src={item.image} alt="image" />
                 <div className={styles.content}>
                   <button>Xem thêm</button>
                   <h3>{item.title}</h3>

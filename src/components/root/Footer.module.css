@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     padding: 15px;
-    background-color: #094B76;
+    background-color: #1E2024;
     color: #9A9DA2;
 }
 
@@ -72,7 +72,7 @@
 .follow-list li {
     height: 40px;
     width: 40px;
-    background-color: #4290A9;
+    background-color: #31404b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +81,7 @@
 }
 
 .follow-list li:hover {
-    background-color: #428fa9b3;
+    background-color: #4a677d;
 }
 
 .follow-list a {
@@ -110,19 +110,20 @@
 }
 
 .industrys-list li {
-    background-color: #4290A9;
+    background-color: #31404b;
     padding: 5px;
     cursor: pointer;
     margin-right: 10px;
 }
 
 .industrys-list li:hover {
-    background-color: #428fa9b3;
+    background-color: #4d6271;
 }
 
 .industrys-list li a {
-    color: #dedede;
+    color: white;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .location {

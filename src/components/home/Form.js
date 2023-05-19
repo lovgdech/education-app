@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Form.module.css";
 
-const Form = () => {
+const Form = (props) => {
   const contactSubmitHandler = (e) => {
     alert("Gửi thành công!");
     e.preventDefault();
@@ -14,6 +14,7 @@ const Form = () => {
         <h3>Liên hệ & góp ý</h3>
       </div>
       <div className={styles.body}>
+        {props.element && <props.element />}
         <form onSubmit={contactSubmitHandler}>
           <div className={styles.verification}>
             <div className={styles["form-control"]}>

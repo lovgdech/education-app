@@ -5,7 +5,7 @@ import { moveTile } from "../../reducers/reducers";
 import styles from "./Game.module.css";
 
 const Puzzle = (props) => {
-  const tileWidth = 300 / props.size;
+  const tileWidth = 400 / props.size;
   const tileWrapperStyle = {
     width: `${props.size * tileWidth}px`,
   };

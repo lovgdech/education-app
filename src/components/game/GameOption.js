@@ -48,9 +48,9 @@ const GameOption = (props) => {
               >
                 <div className={styles.header}>
                   <img src={item.image} />
-                  <h3>{item.industry}</h3>
                 </div>
                 <div className={styles.content}>
+                  <h3>{item.industry}</h3>
                   <p>{item.content}</p>
                 </div>
               </SwiperSlide>

@@ -1,5 +1,6 @@
 .news {
     width: 100%;
+    flex: 2;
     overflow: hidden;
     margin-bottom: 20px;
     overflow: hidden;
@@ -15,7 +16,7 @@
     background-color: white;
     margin-bottom: 10px;
     border: 1px solid #dee2e6;
-    border-left: 5px solid #244366;
+    border-left: 5px solid #e0a800;
 }
 
 .header h3 {
@@ -48,6 +49,7 @@
     border-radius: 3px;
     margin-bottom: 10px;
     border-bottom: 1px solid #bebebe;
+    cursor: default;
 }
 
 .box img {
@@ -66,9 +68,9 @@
 
 .content button {
     padding: 8px 15px;
-    background-color: #4290a9;
+    background-color: #e0a800;
     border: 0;
-    color: white;
+    color: black;
     cursor: pointer;
     text-transform: uppercase;
 }
@@ -145,6 +147,7 @@
     margin-bottom: 10px;
     overflow: hidden;
     border-bottom: 1px solid #bebebe;
+    cursor: default;
 }
 
 .box-t2>img {
@@ -162,23 +165,24 @@
     flex-direction: row;
     overflow: hidden;
     border-bottom: 1px solid #bebebe;
+    cursor: default;
 }
 
 .box-t3>img {
     width: 30%;
-
+    object-fit: cover;
 }
 
 .box-t3 .content {
-    padding: 10px 20px;
+    padding: 20px;
     flex: 1;
 }
 
 .box-t3 button {
     padding: 5px 10px;
-    background-color: #4290a9;
+    background-color: #e0a800;
     border: 0;
-    color: white;
+    color: black;
     font-size: 1.2rem;
     text-transform: uppercase;
 }
@@ -190,5 +194,5 @@
 }
 
 .content button:hover {
-    background-color: #318aa8;
+    background-color: #c39405;
 }

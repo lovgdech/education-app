@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import styles from "./Industry.module.css";
 import "swiper/css";
-import ImageCNTT from "../../assets/images/industry-cntt.png";
 import { INDUSTRYS_DATA } from "../../data";
 import { Autoplay } from "swiper";
 
@@ -38,7 +37,7 @@ const AboutIndustry = () => {
           {INDUSTRYS_DATA.map((industry) => {
             return (
               <SwiperSlide key={industry.id} className={styles.box}>
-                <img src={ImageCNTT} alt="Image" />
+                <img src={industry.image} alt="Image" />
                 <div className={styles.content}>
                   <button>{industry.industry}</button>
                   <p>{industry.title}</p>

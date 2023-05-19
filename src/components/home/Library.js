@@ -4,7 +4,6 @@ import React, { useState } from "react";
 
 import styles from "./Library.module.css";
 import { LIBRARY_DATA } from "../../data";
-import BannerBackground from "../../assets/images/banner-background.jpg";
 
 const Library = () => {
   const [view, setView] = useState(4);
@@ -28,7 +27,7 @@ const Library = () => {
             return (
               <div key={item.id} className={styles.box}>
                 <div className={styles.image}>
-                  <img src={BannerBackground} alt="image" />
+                  <img src={item.image} alt="image" />
                 </div>
                 <h3>{item.industry}</h3>
                 <hr></hr>
