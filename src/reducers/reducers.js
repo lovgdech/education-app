@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-rename */
 import {
   generateTileSet,
   swapTilesInSet,
@@ -6,13 +5,17 @@ import {
   getIndexInHighScoreList,
   tileIsValidForMovement,
 } from "./tileset-functions";
+import { gameConfigs } from "./game-configs";
 import { v4 as uuidv4 } from "uuid";
 import { createSlice } from "@reduxjs/toolkit";
+
+// The state is an object with game state and an array of tiles
+// A tile is a number 1-N and the blank tile is represented by 0
 
 const initialState = {
   moves: 0,
   gameComplete: false,
-  imageNumber: 1,
+  imageNumber: undefined,
   tiles: [],
   size: undefined,
   gameId: undefined,
@@ -31,16 +34,25 @@ const emptyTileId = 0;
 const gameSlice = createSlice({
   name: "tileGame",
   initialState: initialState,
+
+  //
+  // Reducers use mutating syntax which is ok within createSlice
+  // as immer is used internally
+  //
   reducers: {
     initGame(state, action) {
       const payload = action.payload;
 
       Object.assign(state, initialState);
       state.imageNumber = payload.imageNumber;
-      state.tiles = generateTileSet(3, payload.doShuffling);
-
-      state.size = 3;
+      state.tiles = generateTileSet(
+        gameConfigs[payload.gameId].size,
+        payload.doShuffling
+      );
+      state.size = gameConfigs[payload.gameId].size;
       state.gameId = payload.gameId;
+      state.gameName = gameConfigs[payload.gameId].name;
+      state.highScoreListId = gameConfigs[payload.gameId].highscorelistid;
     },
 
     moveTile(state, action) {
@@ -51,23 +63,28 @@ const gameSlice = createSlice({
         return state;
       }
 
+      //
+      // Move the tile, i.e. change placement with the empty tile
+      //
       state.moves = state.moves + 1;
       state.tiles = swapTilesInSet(state.tiles, emptyTileId, action.payload.id);
       state.gameComplete = allTilesAreAligned(state.tiles);
 
+      //
+      // Check result against highscore list
+      //
       if (state.gameComplete && state.highScoreList) {
+        // Highscore list is available
         const newUserId = uuidv4();
-
         const time = Date.now();
-
         const idxInHighScoreList = getIndexInHighScoreList(
           newUserId,
           time,
           state.moves,
           state.highScoreList
         );
-
         if (idxInHighScoreList > -1) {
+          // User made it into the leaderboard
           state.highScorePosition = idxInHighScoreList + 1;
           state.userId = newUserId;
         }
@@ -82,6 +99,10 @@ const gameSlice = createSlice({
       state.userName = action.payload.name;
     },
 
+    imageChange(state, action) {
+      state.imageNumber = action.payload.imageNumber;
+    },
+
     highScoreListSaved(state, action) {
       state.highScoreListSaved = true;
       state.highScoreList = action.payload.highScoreList;
@@ -94,12 +115,12 @@ const gameSlice = createSlice({
 });
 
 export const {
-  initGame: initGame,
-  moveTile: moveTile,
+  initGame,
+  moveTile,
   highScoreListLoaded,
   nameChanged,
+  imageChange,
   highScoreListSaved,
   nameSubmitted,
 } = gameSlice.actions;
-
 export default gameSlice.reducer;

@@ -61,3 +61,7 @@ header {
 .list a:hover {
     color: yellow;
 }
+
+.header .active {
+    color: yellow;
+}

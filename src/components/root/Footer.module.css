@@ -1,13 +1,11 @@
 .footer {
     width: 100%;
-    padding: 15px;
+    padding: 35px 5vw 15px;
     background-color: #1E2024;
     color: #9A9DA2;
 }
 
 .content {
-    width: 90%;
-    margin: 20px auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

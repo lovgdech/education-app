@@ -4,13 +4,34 @@ import FullImageView from "./FullImageView";
 import RestartButtonsView from "./RestartButtonsView";
 import { initGame } from "../../reducers/reducers";
 import GameStatusView from "./GameStatusView";
+import DetailsImage from "./DetailsImage";
 
 import styles from "./Game.module.css";
+// import GameForm from "./GameForm";
 
 const Game = (props) => {
+  const editInputUserHandler = (values) => {
+    const date = new Date();
+
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    let currentDate = `${day}-${month}-${year}`;
+
+    const rankingData = {
+      ...values,
+      date: currentDate,
+      move: props.moves,
+      gameId: props.gameId,
+    };
+
+    props.onAddRankingsUser(rankingData);
+  };
+
   return (
     <div className={styles.game}>
-      <GameStatusView />
+      <GameStatusView onEditInputUser={editInputUserHandler} />
       <div className={styles.content}>
         <PuzzleView />
         <div
@@ -18,36 +39,47 @@ const Game = (props) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            alignItems: "center",
             height: "100%",
           }}
         >
-          <FullImageView />
-          <RestartButtonsView
-            onInitGame={props.onInitGame}
-            imageNumber={props.imageNumber}
-            onChangeImageNumber={props.onChangeImageNumber}
-          />
+          {!props.gameComplete && (
+            <FullImageView
+              imageNumber={props.imageNumber}
+              gameComplete={props.gameComplete}
+            />
+          )}
+          {props.gameComplete && (
+            <DetailsImage imageNumber={props.imageNumber} />
+          )}
         </div>
       </div>
+      <RestartButtonsView
+        onInitGame={props.onInitGame}
+        imageNumber={props.imageNumber}
+        onChangeImageNumber={props.onChangeImageNumber}
+      />
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
   return {
+    moves: state.tileGame.moves,
+    gameId: state.tileGame.gameId,
     gameName: state.tileGame.gameName,
     highScoreList: state.tileGame.highScoreList,
+    imageNumber: state.tileGame.imageNumber,
+    gameComplete: state.tileGame.gameComplete,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onInitGame: (gameId) => {
+    onInitGame: (gameId, imageNumber) => {
       dispatch(
         initGame({
           gameId,
-          imageNumber: gameId,
+          imageNumber,
           doShuffling: true,
         })
       );

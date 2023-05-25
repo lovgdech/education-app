@@ -133,6 +133,8 @@ export const GAMEOPTIONS_DATA = [
     id: "g1",
     image: LogoTruong,
     industry: "Trường đại học Sao Đỏ",
+    details_content:
+      "Trường Đại học Sao Đỏ hôm nay là sự kế thừa quá trình phát triển của Trường Công nhân cơ Điện mỏ thành lập ngày 15/5/1969 và Trường Công nhân Cơ khí Chí Linh thành lập ngày 8/4/1975. Năm 1991, trước những yêu cầu đổi mới của đất nước, theo quy hoạch các trường dạy nghề, Bộ Năng lượng quyết định sáp nhập 2 trường thành Trường Công nhân Cơ điện Chí Linh trực thuộc Tổng Công ty Than Việt Nam. Tháng 3/2001 trường được Bộ trưởng Bộ Công nghiệp ký quyết định nâng cấp thành trường Trung học Công nghiệp Cơ điện. Để đáp ứng nhu cầu đào tạo nguồn nhân lực chất lượng cao cho đất nước nói chung và cho vùng đồng bằng Bắc bộ nói riêng, ngày 04/10/2004 Bộ trưởng Bộ Giáo dục và Đào tạo ký quyết định nâng cấp, Trường mang tên: Trường Cao đẳng Công nghiệp Sao Đỏ. Theo xu thế phát triển của nền giáo dục đất nước, Trường được đưa vào quy hoạch mạng lưới phát triển các trường đại học giai đoạn 2006-2010, ngày 24/3/2010 Thủ tướng Chính phủ đã ký Quyết định số 376/QĐ-TTg thành lập Trường Đại học Sao Đỏ trên cơ sở nâng cấp từ Trường Cao đẳng Công nghiệp Sao Đỏ. ",
     content:
       "Trường có chức năng đào tạo, bồi dưỡng nguồn nhân lực có trình độ đại học, sau đại học và các trình độ thấp hơn theo quy định của pháp luật; đồng thời là trung tâm nghiên cứu, ứng dụng, chuyển giao khoa học - công nghệ đa ngành.",
   },
@@ -140,6 +142,8 @@ export const GAMEOPTIONS_DATA = [
     id: "g2",
     image: LogoKhoaCNTT,
     industry: "Khoa công nghệ thông tin",
+    details_content:
+      "Hiện nay, ngành công nghệ thông tin là một trong những ngành học được chú trọng trong hệ thống đào tạo của trường Đại học Sao Đỏ cũng như các trường Đại học khác có đào tạo ngành học này. Nó được xem là ngành đào tạo mũi nhọn hướng đến sự phát triển của công nghệ và khoa học kỹ thuật trong thời đại số hóa ngày nay. Công nghệ thông tin là một ngành học được đào tạo để sử dụng máy tính và các phần mềm máy tính để phân phối và xử lý các dữ liệu thông tin, đồng thời dùng để trao đổi, lưu trữ và chuyển đổi các dữ liệu thông tin dưới nhiều hình thức khác nhau.",
     content:
       "Hiện nay, ngành công nghệ thông tin là một trong những ngành học" +
       "được chú trọng trong hệ thống đào tạo của trường Đại học Sao Đỏ" +
@@ -150,6 +154,8 @@ export const GAMEOPTIONS_DATA = [
     id: "g3",
     image: LogoKhoaCOKHI,
     industry: "Khoa cơ khí",
+    details_content:
+      "Ngành Kỹ thuật cơ khí là một ngành khoa học kỹ thuật chuyên ứng dụng những nguyên lý vật lý cùng với kỹ thuật và khoa học vật liệu để có thể thiết kế, phân tích, chế tạo và bảo dưỡng các loại máy móc và hệ thống cơ khí. Ngành Kỹ thuật cơ khí sẽ phục vụ cho công tác thiết kế trong các lĩnh vực như ô tô, máy bay, phương tiện giao thông, các hệ thống gia nhiệt và làm lạnh, đồ dùng gia đình, máy móc và thiết bị sản xuất, vũ khí. Đây là lĩnh vực kỹ thuật liên quan đến thiết kế, chế tạo và vận hành máy móc. ",
     content:
       "Ngành Kỹ thuật cơ khí là một ngành khoa học kỹ thuật chuyên ứng dụng những nguyên lý vật lý cùng với kỹ thuật và khoa học vật liệu để có thể thiết kế, phân tích, chế tạo và bảo dưỡng các loại máy móc và hệ thống cơ khí.",
   },
@@ -157,6 +163,8 @@ export const GAMEOPTIONS_DATA = [
     id: "g4",
     image: LogoKhoaOTO,
     industry: "Khoa ô tô",
+    details_content:
+      "Với sự phát triển không ngừng của khoa học kỹ thuật và nhu cầu xã hội, công nghệ ô tô trở thành lĩnh vực mũi nhọn của nền kinh tế toàn cầu. Cụ thể, ngành nghề này đang ngày càng cho thấy những tiềm năng lớn mạnh. Nhu cầu lớn về nguồn nhân lực: Trong xu thế hội nhập, nhu cầu mua sắm các loại phương tiện di chuyển đặc biệt là ô tô đang có tốc độ gia tăng nhanh chóng. Thực tế này kéo theo nhu cầu về nguồn nhân lực ngày một tăng trong tương lai.",
     content:
       "Với sự phát triển không ngừng của khoa học kỹ thuật và nhu cầu xã hội, công nghệ ô tô trở thành lĩnh vực mũi nhọn của nền kinh tế toàn cầu. Cụ thể, ngành nghề này đang ngày càng cho thấy những tiềm năng lớn mạnh.",
   },
@@ -171,6 +179,8 @@ export const GAMEOPTIONS_DATA = [
     id: "g6",
     image: LogoKhoaTHUCPHAM,
     industry: "Khoa thực phẩm",
+    details_content:
+      "Công nghệ thực phẩm, hiểu một cách đơn giản, là ngành học chuyên về lĩnh vực bảo quản, chế biến nông sản, kiểm tra, đánh giá chất lượng trong quá trình chế biến thực phẩm; đồng thời nghiên cứu phát triển các sản phẩm mới, vận hành dây chuyền sản xuất - bảo quản, tạo ra nguyên liệu mới trong lĩnh vực thực phẩm, dược phẩm hay hóa học… Ứng dụng của ngành này vô cùng đa dạng và gần gũi với đời sống hàng ngày của chúng ta. Công nghệ thực phẩm ngày càng chiếm vai trò quan trọng trong đời sống hàng ngày vì mức độ phức tạp trong nhu cầu của con người đang gia tăng mạnh. Cụ thể tại Việt Nam, với dân số hơn 90 triệu người và tốc độ tăng trưởng kinh tế trung bình hàng năm là 7,5%, nhu cầu tiêu dùng đối với thực phẩm chế biến ngày càng lớn và phong phú cả về mẫu mã lẫn chất lượng, đặc biệt là sản phẩm sạch.",
     content:
       "Công nghệ thực phẩm, hiểu một cách đơn giản, là ngành học chuyên về lĩnh vực bảo quản, chế biến nông sản, kiểm tra, đánh giá chất lượng trong quá trình chế biến thực phẩm; đồng thời nghiên cứu phát triển các sản phẩm mới.",
   },
@@ -178,6 +188,8 @@ export const GAMEOPTIONS_DATA = [
     id: "g7",
     image: LogoKhoaDLNN,
     industry: "Khoa du lịch & ngoại ngữ",
+    details_content:
+      "Ngành du lịch là ngành kinh tế tổng hợp, gồm nhiều nhóm ngành nghề liên quan đến nhiệm vụ đào tạo và cung cấp nhân lực cho các công ty lữ hành, khách sạn, hay nhà hàng,…Ngành du lịch có sự đóng góp to lớn vào tổng sản phẩm kinh tế quốc dân ở nước ta. Hiện du lịch được coi là một trong ba ngành kinh tế lớn được chú trọng đầu tư, không ngừng phát triển. Du lịch thúc đẩy hỗ trợ các ngành như giao thông vận tải, bưu chính viễn thông, bảo hiểm, dịch vụ tài chính, lưu trú và ăn uống, đồng thời giải quyết việc làm cho đa số lao động phụ ở các thành phố, thị trấn.",
     content:
       "Ngành du lịch là ngành kinh tế tổng hợp, gồm nhiều nhóm ngành nghề liên quan đến nhiệm vụ đào tạo và cung cấp nhân lực cho các công ty lữ hành, khách sạn, hay nhà hàng,…Ngành du lịch có sự đóng góp to lớn vào tổng sản phẩm.",
   },
@@ -185,6 +197,8 @@ export const GAMEOPTIONS_DATA = [
     id: "g8",
     image: LogoKhoaKINHTE,
     industry: "Khoa kinh tế",
+    details_content:
+      "Ngành Kinh tế hay Kinh tế học là môn khoa học xã hội nghiên cứu sự sản xuất, phân phối và tiêu dùng các loại hàng hóa và dịch vụ. Kinh tế học cũng nghiên cứu cách thức xã hội quản lý các nguồn tài nguyên (nguồn lực) khan hiếm của nó. Nghiên cứu Kinh tế học nhằm mục đích giải thích cách thức các nền kinh tế vận động và cách tác nhân kinh tế tương tác với nhau. Các nguyên tắc kinh tế được ứng dụng trong đời sống xã hội, trong thương mại, tài chính và hành chính công, thậm chí là trong ngành tội phạm học, giáo dục, xã hội học, luật học và nhiều ngành khoa học khác.",
     content:
       "Ngành Kinh tế hay Kinh tế học là môn khoa học xã hội nghiên cứu sự sản xuất, phân phối và tiêu dùng các loại hàng hóa và dịch vụ. Kinh tế học cũng nghiên cứu cách thức xã hội quản lý các nguồn tài nguyên (nguồn lực) khan hiếm của nó.",
   },

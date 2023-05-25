@@ -1,0 +1,46 @@
+.rank {
+    width: 100%;
+    padding: 15px 8vw;
+    color: white;
+    margin: 30px 0;
+    border-top: 1px solid grey;
+    min-height: 500px;
+}
+
+.rank h3 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.highscoretable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.highscoretable th {
+    text-transform: uppercase;
+}
+
+.highscoretable td,
+.highscoretable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center !important;
+}
+
+.highscoretable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3D869D;
+    color: white;
+}
+
+.name {
+    text-transform: capitalize;
+}
+
+.class {
+    text-transform: uppercase;
+}

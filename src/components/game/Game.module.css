@@ -2,15 +2,16 @@
   text-align: center;
   padding: 0 8%;
   height: calc(100vh - 80px);
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   color: white;
+  position: relative;
 }
 
 .game-status h3 {
   font-size: 2rem;
-  text-transform: uppercase;
 }
 
 .game-status p {
@@ -18,23 +19,19 @@
   margin-top: 3px;
 }
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* .button {} */
 
 .button button {
   font-size: 1.4rem;
   height: 40px;
-  width: 150px;
+  width: 140px;
   background-color: #e0a800;
   border: none;
   border-radius: 3px;
   color: black;
   text-transform: uppercase;
-  margin: 0 20px;
   cursor: pointer;
+  margin: 15px 10px 0;
 }
 
 .button button:hover {
@@ -63,14 +60,22 @@
 
 .full-image {
   overflow: hidden;
-  border: 1px solid gray;
-  width: 300px;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+  width: 400px;
+  align-items: center;
+}
+
+.full-image h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .full-image img {
-  height: 100%;
-  width: 100%;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
 }
 
@@ -88,4 +93,10 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.full-image .image-complete {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
 }

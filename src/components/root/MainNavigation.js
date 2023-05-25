@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import styles from "./MainNavigation.module.css";
 import LogoImg from "../../assets/images/logo.png";
@@ -20,16 +20,45 @@ const MainNavigation = () => {
           </div>
           <ul className={styles.list}>
             <li>
-              <Link to="/">Trang chủ</Link>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+                end
+              >
+                Trang chủ
+              </NavLink>
             </li>
             <li>
-              <Link to="/news">Tin tức</Link>
+              <NavLink
+                to="/news"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                Tin tức
+              </NavLink>
             </li>
             <li>
-              <Link to="/game">Giải trí</Link>
+              <NavLink
+                to="/game"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                Giải trí
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact">Liên hệ</Link>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                Liên hệ
+              </NavLink>
             </li>
           </ul>
         </nav>

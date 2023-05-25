@@ -34,7 +34,6 @@
 .form form {
     width: 100%;
     margin-top: 10px;
-    overflow: hidden;
 }
 
 .form input {
@@ -88,7 +87,7 @@
     border-radius: 3px;
     color: black;
     text-transform: uppercase;
-    box-shadow: 2px 8px 12px #e0a800;
+    box-shadow: 1px 1px 8px #e0a80091;
     cursor: pointer;
 }
 

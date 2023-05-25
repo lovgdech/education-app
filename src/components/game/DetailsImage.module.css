@@ -1,0 +1,25 @@
+.details-image {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-image h3 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.content {
+    flex: 1;
+}
+
+.content p {
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 2.2rem;
+}

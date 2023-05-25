@@ -1,0 +1,19 @@
+.enter-name form {
+    text-align: left;
+    width: 300px;
+}
+
+.form-control {
+    margin: 3px 0;
+}
+
+.form-control input {
+    padding: 5px 10px;
+    outline: none;
+    width: 200px;
+}
+
+.enter-name button {
+    padding: 5px 15px;
+    cursor: pointer;
+}

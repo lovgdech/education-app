@@ -39,19 +39,20 @@ const GameOption = (props) => {
         >
           {GAMEOPTIONS_DATA.map((item, index) => {
             return (
-              <SwiperSlide
-                onClick={() => {
-                  props.onChangeImageNumber(index + 1);
-                }}
-                key={item.id}
-                className={styles.box}
-              >
+              <SwiperSlide key={item.id} className={styles.box}>
                 <div className={styles.header}>
                   <img src={item.image} />
                 </div>
                 <div className={styles.content}>
                   <h3>{item.industry}</h3>
                   <p>{item.content}</p>
+                  <button
+                    onClick={() => {
+                      props.onChangeImageNumber(index + 1);
+                    }}
+                  >
+                    Chơi ngay
+                  </button>
                 </div>
               </SwiperSlide>
             );

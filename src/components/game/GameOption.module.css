@@ -1,6 +1,8 @@
 .game {
+    height: calc(100vh - 80px);
     width: 100%;
-    padding: 30px 8vw;
+    padding: 30px 8vw 10px;
+    min-height: 700px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,8 +28,8 @@
 }
 
 .row {
+    flex: 1;
     width: 100%;
-    overflow: hidden;
 }
 
 .box {
@@ -35,12 +37,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
     border-radius: 9px;
     box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     min-width: 350px;
-    cursor: pointer;
+    min-height: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+    cursor: default;
 }
 
 .header {
@@ -57,16 +61,20 @@
 }
 
 .header img {
-    height: 250px;
-    width: 250px;
+    height: 220px;
+    width: auto;
     border-radius: 50%;
     object-fit: cover;
     padding: 10px;
 }
 
 .content {
+    flex: 1;
     background-color: #4290A9;
     padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content h3 {
@@ -78,8 +86,25 @@
     margin-bottom: 10px;
 }
 
-
 .content p {
     text-align: justify;
     color: white;
+}
+
+.content button {
+    font-size: 1.4rem;
+    height: 40px;
+    width: 100%;
+    background-color: #e0a800;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+}
+
+.content button:hover {
+    background-color: #c39405;
 }
