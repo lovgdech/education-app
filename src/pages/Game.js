@@ -12,28 +12,28 @@ import Rank from "../components/game/Rank";
 const DUMMY_RANK = [
   {
     id: "2100878",
-    name: "nguyen dang long",
+    name: "nguyễn đặng long",
     class: "dk12-cntt2",
     move: "25",
-    date: "25-05-2023",
+    date: "25-5-2023",
     gameId: GameId_3x3,
   },
-  // {
-  //   id: "2100879",
-  //   name: "nguyen dang long",
-  //   class: "dk12-cntt2",
-  //   move: "55",
-  //   date: "25-05-2023",
-  //   gameId: GameId_4x4,
-  // },
-  // {
-  //   id: "2100880",
-  //   name: "nguyen dang long",
-  //   class: "dk12-cntt2",
-  //   move: "75",
-  //   date: "25-05-2023",
-  //   gameId: GameId_5x5,
-  // },
+  {
+    id: "2100879",
+    name: "bùi quý đạt",
+    class: "dk12-cntt2",
+    move: "26",
+    date: "25-5-2023",
+    gameId: GameId_3x3,
+  },
+  {
+    id: "2100880",
+    name: "vũ thị bắc",
+    class: "dk12-cntt2",
+    move: "75",
+    date: "25-5-2023",
+    gameId: GameId_3x3,
+  },
 ];
 
 const Game = () => {
@@ -78,7 +78,7 @@ const Game = () => {
           onChangeImageNumber={changeImageNumberHandler}
         />
       )}
-      <Rank items={rankUser} />
+      {imageNumber && <Rank items={rankUser} />}
     </Provider>
   );
 };

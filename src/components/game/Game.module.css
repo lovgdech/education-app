@@ -1,7 +1,6 @@
 .game {
   text-align: center;
   padding: 0 8%;
-  height: calc(100vh - 80px);
   min-height: 700px;
   display: flex;
   flex-direction: column;

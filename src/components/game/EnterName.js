@@ -25,6 +25,7 @@ const EnterName = (props) => {
       class: enteredClass,
     };
     props.onAddRankingsUser(inputValue);
+    alert("Submit success!");
     setEnteredClass("");
     setEnteredId("");
     setEnteredName("");
@@ -33,34 +34,41 @@ const EnterName = (props) => {
   return (
     <div className={styles["enter-name"]}>
       <form onSubmit={formsubmissionHandler}>
-        <div className={styles["form-control"]}>
-          <label htmlFor="id">Mã sinh viên</label>
-          <input
-            type="text"
-            id="id"
-            onChange={idInputChangeHanler}
-            value={enteredId}
-          />
+        <div>
+          <div className={styles["form-control"]}>
+            {/* <label htmlFor="id">Mã sinh viên</label> */}
+            <input
+              type="text"
+              id="id"
+              onChange={idInputChangeHanler}
+              value={enteredId}
+              placeholder="Nhập mã sinh viên"
+            />
+          </div>
+          <div className={styles["form-control"]}>
+            {/* <label htmlFor="name">Tên</label> */}
+            <input
+              type="text"
+              id="name"
+              onChange={nameInputChangeHanler}
+              value={enteredName}
+              placeholder="Tên"
+            />
+          </div>
         </div>
-        <div className={styles["form-control"]}>
-          <label htmlFor="name">Tên</label>
-          <input
-            type="text"
-            id="name"
-            onChange={nameInputChangeHanler}
-            value={enteredName}
-          />
+        <div>
+          <div className={styles["form-control"]}>
+            {/* <label htmlFor="class">Lớp</label> */}
+            <input
+              type="text"
+              id="class"
+              onChange={classInputChangeHanler}
+              value={enteredClass}
+              placeholder="Lớp"
+            />
+          </div>
+          <button>Submit</button>
         </div>
-        <div className={styles["form-control"]}>
-          <label htmlFor="class">Lớp</label>
-          <input
-            type="text"
-            id="class"
-            onChange={classInputChangeHanler}
-            value={enteredClass}
-          />
-        </div>
-        <button>Submit</button>
       </form>
     </div>
   );

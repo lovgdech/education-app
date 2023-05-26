@@ -23,7 +23,7 @@ const Rank = (props) => {
             if (index === 29) return <></>;
             else
               return (
-                <tr key={item.id}>
+                <tr key={Math.random()}>
                   <td>{index + 1}</td>
                   <td>{item.id}</td>
                   <td className={styles.name}>{item.name}</td>

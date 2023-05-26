@@ -9,7 +9,10 @@ const GameStatus = (props) => {
       <div className={styles["game-status"]}>
         <div>
           <h3>Hoàn thành!</h3>
-          <p>Bạn đã mất {props.moves} bước để hoàn thành.</p>
+          <p>
+            Bạn đã mất {props.moves} bước để hoàn thành. Vui lòng cung cấp thông
+            tin của bạn!
+          </p>
         </div>
         <EnterName onAddRankingsUser={props.onEditInputUser} />
       </div>
