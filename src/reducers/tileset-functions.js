@@ -1,48 +1,56 @@
-import shuffle from "shuffle-array";
+import shuffle from "shuffle-array"; // thư viện dùng Xáo trộn mảng
 import { isSolvable } from "./solvableChecker";
-
-//
-// The TileSet is an array of length size*size representing
-// a size*size matrix with unique values [0...(size*size -1)]
-// A tile value/id represents a slice of an image
-// When array[i] === i+1, the tile is correctly positioned in the matrix
-// The value 0 represents a blank tile
-// In the unshuffled TileSet, the blank tile is positioned in the lower
-// right corner
-//
 
 export function generateTileSet(size: number, doShuffling: boolean): number[] {
   let newTilesArray: number[] = [];
+
+  // Gán giá trị các phần tử của mảng từ 1 đến 9
   for (let i = 0; i < size * size; i++) {
     newTilesArray[i] = i + 1;
   }
+
+  // gán giá trị ô trống trong mảng là 9(arr[8])
   const blankTileIdx = size * size - 1;
   newTilesArray[blankTileIdx] = 0;
 
   if (doShuffling) {
+    // khởi tạo trạng thái game với giá trị chưa hoàn thành
     let solvable = false;
+
     while (!solvable) {
+      // xáo trộn các mảnh ghép
       newTilesArray = shuffle(newTilesArray);
+
       solvable = isSolvable(size, newTilesArray);
     }
   }
+
+  // trả về một mảng từ 0 -> 8 vs giá trị từ 1 -> 9
   return newTilesArray;
 }
 
+// đổi chỗ mảnh click với mảnh trắng
 export function swapTilesInSet(
   tiles: number[],
   sourceId: number,
   destId: number
 ): number[] {
+  // tìm vị trị của mảnh trắng trong mảng
   let sourceIdx = tiles.findIndex((t) => t === sourceId);
   let source = tiles[sourceIdx];
+
+  // tìm vị trí mảnh người chơi click trong mảng
   let destIdx = tiles.findIndex((t) => t === destId);
   let dest = tiles[destIdx];
+
+  // đổi giá trị hai phần tử
   tiles[destIdx] = source;
   tiles[sourceIdx] = dest;
+
   return tiles;
 }
 
+// trả về true nếu thứ tự các mảnh là đúng và false nếu thứ tự các mảnh là sai // hàm check win
 export function allTilesAreAligned(tiles: number[]): boolean {
   for (let i = 0; i < tiles.length; i++) {
     if (tiles[i] !== 0 && tiles[i] !== i + 1) {
@@ -52,6 +60,7 @@ export function allTilesAreAligned(tiles: number[]): boolean {
   return true;
 }
 
+// hàm kiểm tra xem các mảnh có là hợp lệ nếu hợp lệ sẽ gọi hàm xử lý di chuyển mảnh
 export function tileIsValidForMovement(
   id: number,
   size: number,
@@ -60,73 +69,53 @@ export function tileIsValidForMovement(
   if (id < 1 || id > size * size - 1) {
     return false;
   }
+
+  // gọi hàm xử lý di chuyển mảnh
   return tileIsMovable(size, id, tiles);
 }
 
+// hàm xử lý di chuyển mảnh
 export function tileIsMovable(
   size: number,
   id: number,
   tiles: number[]
 ): boolean {
+  // vị trí mảnh trắng trong mảng từ 0 -> 8
   const idx = tiles.findIndex((t) => t === id);
+
+  // cho biết vị trí mảnh trắng thuộc hàng nào
   const row = Math.floor(idx / size);
+
+  console.log(idx, row);
+
+  // vị trí mảnh trắng ở hàng trên và giữa
   if (row < size - 1) {
-    // Check below
     if (tiles[idx + size] === 0) {
       return true;
     }
   }
+
+  // vị trí mảnh trắng ở hàng dưới và giữa
   if (row > 0) {
-    // Check above
     if (tiles[idx - size] === 0) {
       return true;
     }
   }
   const col = idx % size;
 
+  // vị trí mảnh trắng ở cột giữa và phải
   if (col < size - 1) {
-    // check to the right
     if (tiles[idx + 1] === 0) {
       return true;
     }
   }
+
+  // vị trí mảnh trắng ở cột giữa và trái
   if (col > 0) {
-    // check to the left
     if (tiles[idx - 1] === 0) {
       return true;
     }
   }
 
   return false;
-}
-
-export function getIndexInHighScoreList(
-  newUserId: string,
-  userTime: number,
-  score: number,
-  highScoreList: any
-): number {
-  const resultsCopy = highScoreList.results.map((r) => {
-    return {
-      id: r.id,
-      score: r.score,
-      time: isNaN(Date.parse(r.utcDateTime)) ? 0 : Date.parse(r.utcDateTime),
-    };
-  });
-  resultsCopy.push({
-    id: newUserId,
-    score,
-    time: userTime,
-  });
-  resultsCopy.sort((a, b) => a.score - b.score || b.time - a.time);
-
-  let idxInHighScoreList = resultsCopy.findIndex((r) => r.id === newUserId);
-  if (
-    idxInHighScoreList > -1 &&
-    idxInHighScoreList + 1 <= highScoreList.maxSize
-  ) {
-    return idxInHighScoreList;
-  } else {
-    return -1;
-  }
 }
