@@ -8,6 +8,7 @@ import { initGame } from "../reducers/reducers";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import Rank from "../components/game/Rank";
+import Help from "../components/game/Help";
 
 const DUMMY_RANK = [
   {
@@ -39,6 +40,7 @@ const DUMMY_RANK = [
 const Game = () => {
   const [imageNumber, setImageNumber] = useState(null);
   const [rankUser, setRankUser] = useState(DUMMY_RANK);
+  const [help, setHelp] = useState(false);
 
   const addRankingUserHander = (user) => {
     setRankUser((prevUser) => {
@@ -46,6 +48,10 @@ const Game = () => {
         return +a.move - +b.move;
       });
     });
+  };
+
+  const changeHelp = () => {
+    setHelp(!help);
   };
 
   const changeImageNumberHandler = (imageNumber) => {
@@ -68,6 +74,7 @@ const Game = () => {
 
   return (
     <Provider store={store}>
+      {help && <Help onChangeHelp={changeHelp} />}
       {!imageNumber && (
         <GameOption onChangeImageNumber={changeImageNumberHandler} />
       )}
@@ -76,6 +83,7 @@ const Game = () => {
           onAddRankingsUser={addRankingUserHander}
           imageNumber={imageNumber}
           onChangeImageNumber={changeImageNumberHandler}
+          onChangeHelp={changeHelp}
         />
       )}
       {imageNumber && <Rank items={rankUser} />}

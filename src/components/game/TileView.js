@@ -22,13 +22,7 @@ const getStyleForTile = (
   isCorrectPos: boolean,
   imageNumber: number
 ) => {
-  //
-  // Position a section of a background image in the tile
-  // based on the id of the tile
-  //
   if (id === 0) {
-    // This is the blank tile
-    // Show no image
     return {};
   }
 
@@ -43,8 +37,6 @@ const getStyleForTile = (
   };
 
   if (isCorrectPos) {
-    // Use a special style as a hint on that the tile is on
-    // the correct position
     style = {
       ...style,
       outline: "1px solid white",

@@ -7,7 +7,6 @@ import GameStatusView from "./GameStatusView";
 import DetailsImage from "./DetailsImage";
 
 import styles from "./Game.module.css";
-// import GameForm from "./GameForm";
 
 const Game = (props) => {
   const editInputUserHandler = (values) => {
@@ -57,6 +56,7 @@ const Game = (props) => {
         onInitGame={props.onInitGame}
         imageNumber={props.imageNumber}
         onChangeImageNumber={props.onChangeImageNumber}
+        onChangeHelp={props.onChangeHelp}
       />
     </div>
   );

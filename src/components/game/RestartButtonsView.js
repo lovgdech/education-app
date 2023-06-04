@@ -22,6 +22,7 @@ const RestartButtons = (props) => (
     <button onClick={() => props.onInitGame(GameId_5x5, props.imageNumber)}>
       Chơi 5x5
     </button>
+    <button onClick={props.onChangeHelp}>Hướng dẫn</button>
   </div>
 );
 
