@@ -86,8 +86,6 @@ export function tileIsMovable(
   // cho biết vị trí mảnh trắng thuộc hàng nào
   const row = Math.floor(idx / size);
 
-  console.log(idx, row);
-
   // vị trí mảnh trắng ở hàng trên và giữa
   if (row < size - 1) {
     if (tiles[idx + size] === 0) {
