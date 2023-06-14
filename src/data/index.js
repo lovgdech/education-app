@@ -66,15 +66,6 @@ export const SLIDES_DATA = [
     content:
       "Trường có chức năng đào tạo, bồi dưỡng nguồn nhân lực có trình độ đại học, sau đại học và các trình độ thấp hơn theo quy định của pháp luật; đồng thời là trung tâm nghiên cứu, ứng dụng, chuyển giao khoa học - công nghệ đa ngành, đa lĩnh vực, chất lượng cao, đạt trình độ tiên tiến trong hệ thống giáo dục quốc dân, đáp ứng nhu cầu phát triển kinh tế, xã hội của đất nước.",
   },
-  // {
-  //   id: "s5",
-  //   title: "Nơi combat",
-  //   content:
-  //     "Trường có chức năng đào tạo, bồi dưỡng nguồn nhân lực có trình độ đại học, sau đại học và các trình" +
-  //     " độ thấp hơn theo quy định của pháp luật; đồng thời là trung tâm nghiên cứu, ứng dụng, chuyển giao " +
-  //     "khoa học - công nghệ đa ngành, đa lĩnh vực, chất lượng cao, đạt trình độ tiên tiến trong hệ thống giáo " +
-  //     "dục quốc dân, đáp ứng nhu cầu phát triển kinh tế, xã hội của đất nước.",
-  // },
 ];
 
 export const INDUSTRYS_DATA = [
