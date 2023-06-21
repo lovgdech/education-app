@@ -20,12 +20,12 @@ const Rank = (props) => {
         </thead>
         <tbody>
           {props.items.map((item, index) => {
-            if (index === 29) return <></>;
+            if (index === 14) return <></>;
             else
               return (
                 <tr key={Math.random()}>
                   <td>{index + 1}</td>
-                  <td>{item.id}</td>
+                  <td>{item.studentId}</td>
                   <td className={styles.name}>{item.name}</td>
                   <td className={styles.class}>{item.class}</td>
                   <td>{item.date}</td>
@@ -42,6 +42,7 @@ const Rank = (props) => {
           })}
         </tbody>
       </table>
+      <button onClick={props.fetchRankingUserHander}>Làm mới</button>
     </div>
   );
 };

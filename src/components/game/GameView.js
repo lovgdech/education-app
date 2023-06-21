@@ -25,7 +25,7 @@ const Game = (props) => {
       gameId: props.gameId,
     };
 
-    props.onAddRankingsUser(rankingData);
+    props.onAddRankingUser(rankingData);
   };
 
   return (

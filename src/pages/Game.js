@@ -1,53 +1,53 @@
-import React, { useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 
 import GameOption from "../components/game/GameOption";
 import GameView from "../components/game/GameView";
 import tileGame from "../reducers/reducers";
-import { GameId_3x3 } from "../reducers/constants";
 import { initGame } from "../reducers/reducers";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import Rank from "../components/game/Rank";
 import Help from "../components/game/Help";
 
-const DUMMY_RANK = [
-  {
-    id: "2100878",
-    name: "nguyễn đặng long",
-    class: "dk12-cntt2",
-    move: "25",
-    date: "25-5-2023",
-    gameId: GameId_3x3,
-  },
-  {
-    id: "2100879",
-    name: "bùi quý đạt",
-    class: "dk12-cntt2",
-    move: "26",
-    date: "25-5-2023",
-    gameId: GameId_3x3,
-  },
-  {
-    id: "2100880",
-    name: "vũ thị bắc",
-    class: "dk12-cntt2",
-    move: "75",
-    date: "25-5-2023",
-    gameId: GameId_3x3,
-  },
-];
-
 const Game = () => {
   const [imageNumber, setImageNumber] = useState(null);
-  const [rankUser, setRankUser] = useState(DUMMY_RANK);
+  const [rankUser, setRankUser] = useState([]);
   const [help, setHelp] = useState(false);
 
-  const addRankingUserHander = (user) => {
-    setRankUser((prevUser) => {
-      return [user, ...prevUser].sort((a, b) => {
+  const fetchRankingUserHander = useCallback( async () => {
+    const respense = await fetch("https://puzzle-image-c0ea4-default-rtdb.firebaseio.com/ranking.json");
+    const data = await respense.json();
+
+    const loadedRanking = [];
+    for (const key in data) {
+      loadedRanking.push({
+              id: key,
+              studentId: data[key].studentId,
+              name: data[key].name,
+              class: data[key].class,
+              move: data[key].move,
+              date: data[key].date,
+              gameId: data[key].gameId,
+            });
+    }
+    loadedRanking.sort((a, b) => {
         return +a.move - +b.move;
       });
-    });
+    setRankUser(loadedRanking);
+  }, [])
+
+  useEffect(() => {
+      fetchRankingUserHander();
+    }, [fetchRankingUserHander]);
+
+  async function addRankingUserHander(user) {
+    fetch("https://puzzle-image-c0ea4-default-rtdb.firebaseio.com/ranking.json", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
   };
 
   const changeHelp = () => {
@@ -80,13 +80,13 @@ const Game = () => {
       )}
       {imageNumber && (
         <GameView
-          onAddRankingsUser={addRankingUserHander}
+          onAddRankingUser={addRankingUserHander}
           imageNumber={imageNumber}
           onChangeImageNumber={changeImageNumberHandler}
           onChangeHelp={changeHelp}
         />
       )}
-      {imageNumber && <Rank items={rankUser} />}
+      {imageNumber && <Rank items={rankUser} fetchRankingUserHander={fetchRankingUserHander} />}
     </Provider>
   );
 };

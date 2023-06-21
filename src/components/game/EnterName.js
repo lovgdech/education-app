@@ -3,12 +3,12 @@ import { useState } from "react";
 import styles from "./EnterName.module.css";
 
 const EnterName = (props) => {
-  const [enteredId, setEnteredId] = useState("");
+  const [enteredStudentId, setenteredStudentId] = useState("");
   const [enteredName, setEnteredName] = useState("");
   const [enteredClass, setEnteredClass] = useState("");
 
   const idInputChangeHanler = (e) => {
-    setEnteredId(e.target.value);
+    setenteredStudentId(e.target.value);
   };
   const nameInputChangeHanler = (event) => {
     setEnteredName(event.target.value);
@@ -20,14 +20,14 @@ const EnterName = (props) => {
   const formsubmissionHandler = (e) => {
     e.preventDefault();
     const inputValue = {
-      id: enteredId,
+      studentId: enteredStudentId,
       name: enteredName,
       class: enteredClass,
     };
     props.onAddRankingsUser(inputValue);
     alert("Submit success!");
     setEnteredClass("");
-    setEnteredId("");
+    setenteredStudentId("");
     setEnteredName("");
   };
 
@@ -41,7 +41,7 @@ const EnterName = (props) => {
               type="text"
               id="id"
               onChange={idInputChangeHanler}
-              value={enteredId}
+              value={enteredStudentId}
               placeholder="Nhập mã sinh viên"
             />
           </div>
