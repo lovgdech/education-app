@@ -14,41 +14,46 @@ const Game = () => {
   const [rankUser, setRankUser] = useState([]);
   const [help, setHelp] = useState(false);
 
-  const fetchRankingUserHander = useCallback( async () => {
-    const respense = await fetch("https://puzzle-image-c0ea4-default-rtdb.firebaseio.com/ranking.json");
+  const fetchRankingUserHander = useCallback(async () => {
+    const respense = await fetch(
+      "https://education-puzzle-image-default-rtdb.firebaseio.com/ranking.json"
+    );
     const data = await respense.json();
 
     const loadedRanking = [];
     for (const key in data) {
       loadedRanking.push({
-              id: key,
-              studentId: data[key].studentId,
-              name: data[key].name,
-              class: data[key].class,
-              move: data[key].move,
-              date: data[key].date,
-              gameId: data[key].gameId,
-            });
+        id: key,
+        studentId: data[key].studentId,
+        name: data[key].name,
+        class: data[key].class,
+        move: data[key].move,
+        date: data[key].date,
+        gameId: data[key].gameId,
+      });
     }
     loadedRanking.sort((a, b) => {
-        return +a.move - +b.move;
-      });
+      return +a.move - +b.move;
+    });
     setRankUser(loadedRanking);
-  }, [])
+  }, []);
 
   useEffect(() => {
-      fetchRankingUserHander();
-    }, [fetchRankingUserHander]);
+    fetchRankingUserHander();
+  }, [fetchRankingUserHander]);
 
   async function addRankingUserHander(user) {
-    fetch("https://puzzle-image-c0ea4-default-rtdb.firebaseio.com/ranking.json", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-  };
+    fetch(
+      "https://education-puzzle-image-default-rtdb.firebaseio.com/ranking.json",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
+  }
 
   const changeHelp = () => {
     setHelp(!help);
@@ -86,7 +91,12 @@ const Game = () => {
           onChangeHelp={changeHelp}
         />
       )}
-      {imageNumber && <Rank items={rankUser} fetchRankingUserHander={fetchRankingUserHander} />}
+      {imageNumber && (
+        <Rank
+          items={rankUser}
+          fetchRankingUserHander={fetchRankingUserHander}
+        />
+      )}
     </Provider>
   );
 };
